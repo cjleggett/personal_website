@@ -1,14 +1,13 @@
 html, body {
-  background-color: #fff8f0;
-  color: #2b4141;
+  background-color: #fffffc;
+  color: #30343f;
   font-family: 'Work Sans', sans-serif;
-  height: 100%;
   margin: 0px;
  }
 
 nav {
-  background-color: #9db5b2; 
-  color: #fff8f0;
+  background-color: #086788; 
+  color: #fffffc;
 }
 
 #after-nav {
@@ -29,8 +28,7 @@ input[type=text], select, textarea {
   resize: vertical; }
 
 footer > a {
-  color: white; 
-  height: 50px;
+  color: #fffffc; 
 }
 
 .content {
@@ -51,6 +49,10 @@ footer > a:hover {
 
   padding-top: 10px; }
 
+footer {
+  background-color: #086788;
+}
+
 #sticky-footer {
   flex-shrink: none;
   bottom: 0px; }
@@ -63,5 +65,72 @@ footer > a:hover {
     color: red;
     float: center; } }
 
+.link {
+    color: #fffffc
+  }
+
 /*# sourceMappingURL=style.css.map */
 
+.centered {
+  text-align: center;
+}
+
+#form {
+  background-image: linear-gradient(to bottom right, #68656b, #afabb3);
+}
+
+#form-contain{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 50px
+}
+
+
+
+.card {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  filter: blur(px);
+  color: white;
+  transition: transform .5s;
+  cursor: pointer;
+}
+
+
+.card:hover{
+  transform: scale(1.05)
+}
+
+.jumbotron {
+  padding-top: 25px;
+  padding-bottom: 25px
+}
+
+.card-body{
+  height: 250px
+}
+
+#edu{
+  background-image: url("./images/harvard.jpg");
+  background-size: cover;
+}
+
+#exp{
+  background-image: url("./images/code.jpeg");
+  background-size: cover;
+}
+
+#content{
+  margin-top: 70px;
+}
+
+.mobileShow {display: none;}
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){ 
+      .mobileShow {display: inline;}
+}

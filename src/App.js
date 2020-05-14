@@ -1,48 +1,78 @@
 import React from 'react';
 import './App.css';
+import { Navbar, Nav} from 'react-bootstrap';
+import ContactForm from "./ContactForm";
+import Homepage from "./Homepage";
+import Resume from "./Resume";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      current_page: "home"
+    };
+  }
 
 
   render() {
+    var page_content = "";
+    if (this.state.current_page === "contact"){
+      page_content = <ContactForm />
+    } 
+    else if (this.state.current_page === "home"){
+      page_content = <Homepage switchPage={this.switchPage} />
+    }
+    else {
+      page_content = <Resume />
+    }
+    
+
     return (
       <div>
-         <div class="content">
-        <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="tutoring.html">Tutoring</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resume.html">Resume</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Get in Touch</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+        <Navbar id="top-nav" class="nav" bg="dark" variant="dark" expand="lg" fixed="top">
+          <Navbar.Brand onClick={e => this.switchPage(e, "home")} href="#">Connor Leggett</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link onClick={e => this.switchPage(e, "resume")}>Resume</Nav.Link>
+              <Nav.Link onClick={e => this.switchPage(e, "contact")}>Contact</Nav.Link>
+            </Nav>
 
-     
-        <div class="content-inside">
-          Hello, World
+          </Navbar.Collapse>
+        </Navbar>
+
+        <div id="content">{page_content}</div>
+
+        <div class="mobileShow">
+        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         </div>
+
+        <Navbar sticky="bottom" class="nav" bg="dark" variant="dark" expand="lg">
+          <Navbar.Brand onClick={e => this.switchPage(e, "Home")} href="#">Home</Navbar.Brand>
+            <Nav className="mr-auto">
+              <Nav.Link onClick={e => this.switchPage(e, "contact")}>Contact</Nav.Link>
+              <Nav.Link onClick={e => this.externalLink(e, "https://github.com/cjleggett")}href="#">GitHub</Nav.Link>
+              <Nav.Link onClick={e => this.externalLink(e, "https://www.linkedin.com/in/connor-leggett")}href="#">Linkden</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link>Back To Top</Nav.Link>
+            </Nav>
+        </Navbar>
       </div>
-
-      <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-        <a href="index.html" class="col-3">Home</a>
-        <a href="tutoring.html" class="col-3">Tutoring</a>
-        <a href="resume.html" class="col-3">Resume</a>
-        <a href="contact.html" class="col-3">Contact</a>
-        <a href="#navbar" id="toplink" class="col-2">Back To Top</a>
-    </footer>
-    </div>
     );
+  }
+
+  switchPage = (e, newpage) =>{
+    e.preventDefault();
+    this.setState({
+      current_page: newpage
+    })
+    return false;
+  }
+
+  externalLink = (e, newpage) => {
+    e.preventDefault();
+    window.open(newpage, "_blank");
   }
 }
 
