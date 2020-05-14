@@ -14,7 +14,7 @@ class ContactForm extends React.Component {
         </ul>
         <br/>
       <div id="form" className="centered">
-        <iframe title="contact" src="https://docs.google.com/forms/d/e/1FAIpQLSd3oqsda6DDEQcTEsjL3AFVDGqvouFjLxY3v16eFu8W_4XR_Q/viewform?embedded=true" width="640" height="838" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe title="contact" src="https://docs.google.com/forms/d/e/1FAIpQLSd3oqsda6DDEQcTEsjL3AFVDGqvouFjLxY3v16eFu8W_4XR_Q/viewform?embedded=true" width="640" height="838" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
       </div>
       </div>
     )

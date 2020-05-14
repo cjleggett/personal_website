@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current_page: "resume"
+      current_page: "home"
     };
   }
 
@@ -43,13 +43,13 @@ class App extends React.Component {
         <div type="hidden" id="top"></div>
 
         <div id="content">{page_content}</div>
-
+        
         <div className="mobileShow">
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         </div>
 
         <Navbar sticky="bottom" className="nav" bg="dark" variant="dark" expand="lg">
-          <Navbar.Brand onClick={e => this.switchPage(e, "Home")} href="#">Home</Navbar.Brand>
+          <Navbar.Brand onClick={e => this.switchPage(e, "home")} href="#">Home</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link onClick={e => this.switchPage(e, "contact")}>Contact</Nav.Link>
               <Nav.Link onClick={e => this.externalLink(e, "https://github.com/cjleggett")}href="#">GitHub</Nav.Link>
