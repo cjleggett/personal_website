@@ -75,9 +75,6 @@ footer {
   text-align: center;
 }
 
-#form {
-  background-image: linear-gradient(to bottom right, #68656b, #afabb3);
-}
 
 #form-contain{
   padding-left: 50px;
@@ -123,6 +120,11 @@ footer {
   background-size: cover;
 }
 
+#acts-card{
+  background-image: url("./images/me_in_mountains.JPG");
+  background-size: cover;
+}
+
 #content{
   margin-top: 70px;
 }
@@ -134,3 +136,90 @@ footer {
     and (max-device-width : 480px){ 
       .mobileShow {display: inline;}
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+main > nav {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+  padding-left: 0px;
+  border-right: 1px solid #efefef;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 30px solid;
+  background-color: white;
+
+}
+
+.section-nav a {
+  text-decoration: none;
+  display: block;
+  padding: .125rem 0;
+  color: rgb(66, 62, 62);
+  transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+  color: rgb(151, 150, 150);
+}
+
+/** Poor man's reset **/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #fff;
+}
+
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul > li {
+  margin-left: 1rem;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+/** page layout **/
+main {
+  display: grid;
+  grid-template-columns: .25fr .75fr;
+  max-width: 100em;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px
+}
+
+/** enlarge the sections for this demo, so that we have a long scrollable page **/
+section {
+  padding-bottom: 20rem;
+}
+
+#resume_content{
+  border-top: 50px solid white;
+  padding-left: 20px;
+}
+
+

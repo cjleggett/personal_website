@@ -6,26 +6,32 @@ import {Jumbotron, Button, Card} from 'react-bootstrap';
 class Homepage extends React.Component {
   render (){
   return(
-    <div class="centered">
+    <div className="centered">
       <Jumbotron>
         <h1>Hi, I'm Connor.</h1>
-        <p class="centered">
+        <p className="centered">
           I'm currently a student at Harvard College studying Statistics and Computer Science with a passion for using Data and Education to make the world a better place.  
         </p>
-        <p class="centered">
-          <Button  variant="secondary" onClick={e => this.props.switchPage(e, "resume")}>Learn more</Button>
+        <p className="centered">
+          <Button  variant="secondary" onClick={e => this.props.switchPage(e, "resume")}>Learn More</Button>
         </p>
       </Jumbotron>
 
 
-      <Card onClick={e => this.props.switchPage(e, "resume")} bg="dark" style={{ width: '18rem' }}>
+      <Card onClick={e => this.props.switchPage(e, "resume", "education")} bg="dark" style={{ width: '18rem' }}>
         <Card.Header>Education</Card.Header>
-        <Card.Body id="edu" class="card-body">
+        <Card.Body id="edu" className="card-body">
         </Card.Body>
       </Card>
-      <Card onClick={e => this.props.switchPage(e, "resume")}bg="dark" style={{ width: '18rem' }}>
+      <Card onClick={e => this.props.switchPage(e, "resume", "work")}bg="dark" style={{ width: '18rem' }}>
         <Card.Header>Experience</Card.Header>
-        <Card.Body id="exp" class="card-body">
+        <Card.Body id="exp" className="card-body">
+        </Card.Body>
+      </Card>
+
+      <Card onClick={e => this.props.switchPage(e, "resume", "acts")}bg="dark" style={{ width: '18rem' }}>
+        <Card.Header>Activities</Card.Header>
+        <Card.Body id="acts-card" className="card-body">
         </Card.Body>
       </Card>
 

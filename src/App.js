@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current_page: "home"
+      current_page: "resume"
     };
   }
 
@@ -29,7 +29,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Navbar id="top-nav" class="nav" bg="dark" variant="dark" expand="lg" fixed="top">
+        <Navbar id="top-nav" className="nav" bg="dark" variant="dark" expand="lg" fixed="top">
           <Navbar.Brand onClick={e => this.switchPage(e, "home")} href="#">Connor Leggett</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -40,14 +40,15 @@ class App extends React.Component {
 
           </Navbar.Collapse>
         </Navbar>
+        <div type="hidden" id="top"></div>
 
         <div id="content">{page_content}</div>
 
-        <div class="mobileShow">
+        <div className="mobileShow">
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         </div>
 
-        <Navbar sticky="bottom" class="nav" bg="dark" variant="dark" expand="lg">
+        <Navbar sticky="bottom" className="nav" bg="dark" variant="dark" expand="lg">
           <Navbar.Brand onClick={e => this.switchPage(e, "Home")} href="#">Home</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link onClick={e => this.switchPage(e, "contact")}>Contact</Nav.Link>
@@ -55,19 +56,24 @@ class App extends React.Component {
               <Nav.Link onClick={e => this.externalLink(e, "https://www.linkedin.com/in/connor-leggett")}href="#">Linkden</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link>Back To Top</Nav.Link>
+              <Nav.Link href="#top">Back To Top</Nav.Link>
             </Nav>
         </Navbar>
       </div>
     );
   }
 
-  switchPage = (e, newpage) =>{
+  switchPage = (e, newpage, part) =>{
     e.preventDefault();
     this.setState({
       current_page: newpage
-    })
-    return false;
+    }, () =>{
+      if (part){
+        this.forceUpdate();
+        document.getElementById(part).scrollIntoView();
+      }
+    });
+    
   }
 
   externalLink = (e, newpage) => {
