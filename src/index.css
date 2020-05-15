@@ -158,6 +158,7 @@ main > nav {
   padding-left: 0px;
   border-right: 1px solid #efefef;
   background-color: white;
+  border-top: 25px solid;
 
 }
 
@@ -213,7 +214,7 @@ section {
 }
 
 #resume_content{
-  border-top: 50px solid white;
+  border-top: 60px solid white;
   padding-left: 20px;
 }
 
