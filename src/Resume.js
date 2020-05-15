@@ -8,6 +8,7 @@ import extension_photo from "./images/extension.jpg";
 import juni_photo from "./images/juni.png";
 import lawn_photo from "./images/lawn.JPG";
 import hcrc_photo from "./images/hcrc.jpeg";
+import pbha_photo from "./images/pbha.jpg";
 import {Image} from 'react-bootstrap';
 
 
@@ -16,6 +17,7 @@ class Resume extends React.Component {
   render (){
     const resume_link = <a onClick={e => this.props.externalLink(e, require("./images/Resume.pdf"))} href={require("./images/Resume.pdf")}>here</a>
     const lz_link = <a href="https://www.lazarusai.com/" onClick={e => this.props.externalLink(e, "https://www.lazarusai.com/")} >Lazarus Enterprises</a>
+    const pbha_link = <a href="http://pbha.org/" onClick={e => this.props.externalLink(e, "http://pbha.org/")} >Phillips Brooks House Association</a>
   return(
     <div>
       <main>
@@ -138,8 +140,9 @@ class Resume extends React.Component {
             </section>
             <br id="rite"/><br/><br/>
             <section>
-              <h3>Recent Immigrant Term-Time Enrichment</h3>
-              <p>Since coming to college, I have volunteered as a tutor at RITE, an organization within the Phillips Brooks House Administration</p>
+              <h3>Recent Immigrant Term-Time Enrichment (RITE)</h3>
+              <Image src={pbha_photo} className="im-left"  thumbnail />
+              <p>Since coming to college, I have volunteered as a tutor at RITE, an organization within the {pbha_link} (PBHA), a large student-run service organization on campus. During my time with RITE, I have assisted students learning English as a second language with homework, test preparation, and conversational English. I was a co-director of the group from 2019 to 2020, so I assisted in recruiting, training, and coordinating other tutors and attended PBHA cabinet meetings.</p>
             </section>
             <br id="hobbies"/><br/><br/>
             <section>
