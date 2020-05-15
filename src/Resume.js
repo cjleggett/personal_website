@@ -141,6 +141,7 @@ class Resume extends React.Component {
             <br id="rite"/><br/><br/>
             <section>
               <h3>Recent Immigrant Term-Time Enrichment (RITE)</h3>
+              <br/>
               <Image src={pbha_photo} className="im-left"  thumbnail />
               <p>Since coming to college, I have volunteered as a tutor at RITE, an organization within the {pbha_link} (PBHA), a large student-run service organization on campus. During my time with RITE, I have assisted students learning English as a second language with homework, test preparation, and conversational English. I was a co-director of the group from 2019 to 2020, so I assisted in recruiting, training, and coordinating other tutors and attended PBHA cabinet meetings.</p>
             </section>
