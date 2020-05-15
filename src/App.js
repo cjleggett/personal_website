@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current_page: "home"
+      current_page: "resume"
     };
   }
 
@@ -34,7 +34,7 @@ class App extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link onClick={e => this.switchPage(e, "resume")}>Resume</Nav.Link>
+              <Nav.Link onClick={e => this.switchPage(e, "resume")}>About Me</Nav.Link>
               <Nav.Link onClick={e => this.switchPage(e, "contact")}>Contact</Nav.Link>
             </Nav>
 
@@ -54,6 +54,7 @@ class App extends React.Component {
               <Nav.Link onClick={e => this.switchPage(e, "contact")}>Contact</Nav.Link>
               <Nav.Link onClick={e => this.externalLink(e, "https://github.com/cjleggett")}href="#">GitHub</Nav.Link>
               <Nav.Link onClick={e => this.externalLink(e, "https://www.linkedin.com/in/connor-leggett")}href="#">Linkden</Nav.Link>
+              <Nav.Link onClick={e => this.externalLink(e, require("./images/Resume.pdf"))}href="#">Resume</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="#top">Back To Top</Nav.Link>

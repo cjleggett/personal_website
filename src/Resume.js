@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import harvard_photo from "./images/harvard.jpg";
+import roof_photo from "./images/sc_roof.JPG";
 import coding_photo from "./images/code.jpeg";
 import lz_photo from "./images/lz.png";
-import cs50_photo from "./images/cs50.jpg";
-import extension_photo from "./images/extension.jpg";
-import juni_photo from "./images/juni.png";
+import teaching_photo from "./images/teaching.jpg";
 import lawn_photo from "./images/lawn.JPG";
-import hcrc_photo from "./images/hcrc.jpeg";
+import snow_sit from "./images/snow_sit.JPG";
+import cs50_photo from "./images/cs50.jpg";
 import pbha_photo from "./images/pbha.jpg";
 import {Image} from 'react-bootstrap';
 
@@ -17,6 +16,7 @@ class Resume extends React.Component {
   render (){
     const resume_link = <a onClick={e => this.props.externalLink(e, require("./images/Resume.pdf"))} href={require("./images/Resume.pdf")}>here</a>
     const lz_link = <a href="https://www.lazarusai.com/" onClick={e => this.props.externalLink(e, "https://www.lazarusai.com/")} >Lazarus Enterprises</a>
+    const juni_link = <a href="https://junilearning.com/" onClick={e => this.props.externalLink(e, "https://junilearning.com/")} ><b>Juni Learning</b></a>
     const pbha_link = <a href="http://pbha.org/" onClick={e => this.props.externalLink(e, "http://pbha.org/")} >Phillips Brooks House Association</a>
   return(
     <div>
@@ -27,17 +27,14 @@ class Resume extends React.Component {
             <li><a href="#skills">Technical Skills</a></li>
             <li><a href="#work">Work Experience</a>
                 <ul>
-                    <li><a href="#lz">Lazarus Enterprises</a></li>
-                    <li ><a  href="#cs50">CS50</a></li>
-                    <li ><a href="#ext">Harvard Extension School</a></li>
-                    <li><a href="#juni">Juni Learning</a></li>
+                    <li><a href="#lz">Software Engineering</a></li>
+                    <li ><a  href="#teach">Teaching/Education</a></li>
                     <li><a href="#other">Other Work</a></li>
                 </ul>
             </li>
             <li><a href="#acts">Other Activities</a>
                 <ul>
-                    <li><a href="#hcrc">Harvard College Running Club</a></li>
-                    <li><a href="#rite">Recent Immigrant Term-Time Enrichment</a></li>
+                    <li><a href="#vol">Volunteering</a></li>
                     <li><a href="#hobbies">Hobbies</a></li>
                 </ul>
             </li>
@@ -50,8 +47,8 @@ class Resume extends React.Component {
         <br id="education"/><br/><br/>
         <section>
             <h2>Education</h2>
-            <div className="im_contain"><Image src={harvard_photo} className="im" fluid thumbnail /></div>
-            <p>I graduated from Gilford High School in New Hampshire in 2018, and since then, I've been a student at Harvard College. During my time there, I've taken many courses related to computer science and statistics, been involved in a number of exciting extracurriculars, and met some really amazing people. Here's a list of what I believe is my more relevant coursework:</p>
+            <Image src={roof_photo} className="im-left" fluid thumbnail />
+            <p>During my time at Harvard, I've been involved in a number of exciting extracurriculars, and met some really amazing people. Here's a list of what I believe is my more relevant coursework:</p>
             <ul>
               <li><b>Computer Science:</b> I have completed an Introduction to Computer Science, a class on Abstraction and Design, an Introduction to the Theory of Computer Science, and a course on Data Structures and Algorithms.</li>
               <li><b>Statistics:</b> During my sophomore year, I was introduced to the field of statistics, taking classes on both probability and statistical inference, where I gained a strong foundation in how we quantify uncertainty and estimate unknown values.</li>
@@ -62,15 +59,15 @@ class Resume extends React.Component {
         <br id="skills"/><br/><br/>
         <section>
             <h2>Technical Skills</h2>
-            <div className="im_contain"><Image src={coding_photo} className="im" fluid thumbnail /></div>
+            <Image src={coding_photo} className="im-right" fluid thumbnail />
             <ul>
               <li> <b>Programming Languages</b>
                 <ul>
-                  <li><b>Python:</b> This is definitely the language I'm strongest in, as I've been working with it for around four years now. I have experience using packages such as Pandas, PyTorch, TensorFlow, Flask, and Django.</li>
-                  <li><b>R:</b> I've now used R quite a bit in my statistics and economics classes, and I feel fairly comfortable with the language.</li>
+                  <li><b>Python:</b> I've been working with Python for four years, and I have experience using packages such as Pandas, PyTorch, TensorFlow, Flask, and Django.</li>
+                  <li><b>R:</b> I feel confident using R for statistical analysis and simulation</li>
                   <li><b>Java:</b> I've taken AP Computer Science A, taught in Java, and tutored in that same course, so I have a firm foundation in the language</li>
-                  <li><b>OCaml:</b> While it's been a while since I've used this language, it's given me an appreciation for functional programming that I've applied to other languages</li>
-                  <li><b>C/C++:</b> While I'm familiar with the basics of these two languages, I haven't worked with them quite enough to call myself comfortable.</li>
+                  <li><b>OCaml:</b> Taking a course taught in this language has given me an appreciation for functional programming that I've applied to other languages</li>
+                  <li><b>C/C++:</b> I've learned the basics of these languages in two of my classes.</li>
                 </ul>
               </li>
               <li> <b>Web Development</b>
@@ -90,71 +87,74 @@ class Resume extends React.Component {
             <h2>Work Experience</h2>
             <br id="lz"/><br/><br/>
             <section>
-              <h3>Lazarus Enterprises</h3>
-              <Image src={lz_photo} className="im-right"  thumbnail />
-              <p>I spent the summer of 2019 as a backend intern for the healthcare technology startup {lz_link}. While there, I worked on applications that help users assess their own risk of skin cancer and heart diseases by: </p>
+            <h3>Software Engineering</h3>
+            <Image src={lz_photo} className="im-right"  thumbnail />
               <ul>
-                <li>Building machine learning models on AWS servers using Pytorch, TensorFlow, and H2O</li>
-                <li>Launching APIs using Flask and Digital Ocean servers</li>
-                <li>Creating an internal error-logging application using React</li>
+                <li><b>Lazarus Enterprises: </b>I spent the summer of 2019 as a backend intern for the healthcare technology startup {lz_link}. While there, I worked on applications that help users assess their own risk of skin cancer and heart diseases by:
+                <ul>
+                  <li>Building machine learning models on AWS servers using Pytorch, TensorFlow, and H2O</li>
+                  <li>Launching APIs using Flask and Digital Ocean servers</li>
+                  <li>Creating an internal error-logging application using React</li>
+                </ul>
+                </li>
               </ul>
             </section>
-            <br id="cs50"/><br/><br/>
+            <br/><br/><br/>
+            <br id="teach"/><br/><br/>
             <section>
-              <h3>CS50</h3>
-              <div className="im_contain"><Image src={cs50_photo} className="im" fluid thumbnail /></div>
-              <p>During the first semester of my sophomore year, I was a teaching fellow for an introduction to computer science class that taught basic CS concepts in Scratch, C, Python, an Lua. As a teaching fellow, I:</p>
+              
+              <Image src={teaching_photo} className="im-left"  thumbnail />
+              <h3>Teaching</h3>
               <ul>
-                <li>Planned for and led weekly interactive sections with 20-25 students</li>
-                <li>Held weekly office hours and tutorials to assist students with problem sets</li>
-                <li>Previewed new course material and offered suggestions for improvements</li>
+                <li><b>CS50: </b>During the first semester of my sophomore year, I was a teaching fellow for an introduction to computer science class that taught basic CS concepts in Scratch, C, Python, an Lua. As a teaching fellow, I planned for and led weekly interactive sections with 20-25 students, held weekly office hours and tutorials to assist students with problem sets, and previewed new course material and offered suggestions for improvements</li>
+                <li><b>Harvard Extension School: </b> During the first semester of my sophomore year, I was a teaching fellow for an introduction to computer science class that taught basic CS concepts in Scratch, C, Python, an Lua. As a teaching fellow, I planned for and led weekly interactive sections with 20-25 students, held weekly office hours and tutorials to assist students with problem sets, and previewed new course material and offered suggestions for improvements</li>
+                <li>{juni_link}: During the first semester of my sophomore year, I was a teaching fellow for an introduction to computer science class that taught basic CS concepts in Scratch, C, Python, an Lua. As a teaching fellow, I planned for and led weekly interactive sections with 20-25 students, held weekly office hours and tutorials to assist students with problem sets, and previewed new course material and offered suggestions for improvements</li>
               </ul>
-            </section>
-            <br id="ext"/><br/><br/>
-            <section>
-              <h3>Harvard Extension School</h3>
-              <Image src={extension_photo} className="im-right"  thumbnail />
-              <p>During my sophomore spring, I worked as a teaching fellow for CSCI E-33A, a course on web design taught at the Harvard Extension School. During this time, I taught biweekly sections over Zoom, graded student projects, and held office hours to provide advice on design of in-class and personal projects.</p>
-            </section>
-            <br id="juni"/><br/><br/>
-            <section>
-              <h3>Juni Learning</h3>
-              <Image src={juni_photo} className="im-left"  thumbnail />
-              <p>From the fall of 2018 until the Summer of 2019, I worked as a tutor for Juni learning where I instructed middle and high school students in the basics of computer science in Python and Java and held introductory classes for potential students where I made recommendations about course placement. </p>
             </section>
             <br id="other"/><br/><br/>
+            <Image src={lawn_photo} id="lawn" className="im-right"  thumbnail />
             <section>
               <h3>Other Work</h3>
-              <Image src={lawn_photo} className="im-right"  thumbnail />
-              <p>In addition to my computer science related jobs, I've also worked as a ski instructor (a mix of alpine and nordic) for the past five years, and in high school, I ran my own lawncare business where I gained more than twenty clients and was able to hire a couple people to work with me.</p>
+              <ul>
+                <li><b>Ski Instruction: </b> I've worked as a ski instructor (a mix of alpine and nordic) every winter since 2015.</li>
+                <li><b>Lawn Care: </b> In high school, I ran my own lawncare business where I gained more than twenty clients and was able to hire two people to work with me.</li>
+              </ul>
             </section>
         </section>
+        <br/><br/><br/><br/><br/>
         <br id="acts"/><br/><br/>
         <section>
             <h2>Other Activities</h2>
-            <br id="hcrc"/><br/><br/>
             <section>
-              <h3>Harvard College Running Club</h3>
-              <Image src={hcrc_photo} className="im-right"  thumbnail />
-              <p>I've run with HCRC throughout my time in college, and it's helped me to meet some incredible people and find a community on campus. I'm currently serving as the Club's treasurer, where I am responsible for applying for grants, collecting meet fees from other clubs, and creating a budget for the year.</p>
-            </section>
-            <br id="rite"/><br/><br/>
-            <section>
-              <h3>Recent Immigrant Term-Time Enrichment (RITE)</h3>
               <br/>
+              <br id="vol"/><br/><br/>
+              
               <Image src={pbha_photo} className="im-left"  thumbnail />
-              <p>Since coming to college, I have volunteered as a tutor at RITE, an organization within the {pbha_link} (PBHA), a large student-run service organization on campus. During my time with RITE, I have assisted students learning English as a second language with homework, test preparation, and conversational English. I was a co-director of the group from 2019 to 2020, so I assisted in recruiting, training, and coordinating other tutors and attended PBHA cabinet meetings.</p>
+              <h3>Volunteer Work</h3>
+              <ul>
+                <li><b>Recent Immigrant Term-Time Enrichment (RITE):</b>Since coming to college, I have volunteered as a tutor at RITE, an organization within the {pbha_link} (PBHA), a large student-run service organization on campus. During my time with RITE, I have assisted students learning English as a second language with homework, test preparation, and conversational English. I was a co-director of the group from 2019 to 2020, so I assisted in recruiting, training, and coordinating other tutors and attended PBHA cabinet meetings.</li>
+                </ul>
+              <br/><br/><br/>
             </section>
             <br id="hobbies"/><br/><br/>
             <section>
               <h3>Hobbies</h3>
-              <p>…</p>
+              <Image src={snow_sit} className="im-right"  thumbnail />
+              <ul>
+                <li><b>Running: </b>I've run with the Harvard College Running Club throughout my time on campus, and it's helped me to meet some incredible people and find a community on campus. I'm currently serving as the Club's treasurer, where I am responsible for applying for grants, collecting meet fees from other clubs, and creating a budget for the year.</li>
+                <li><b>Soccer: </b>I love both playing and watching soccer, especially when Liverpool's winning! </li>
+                <li><b>Skiing: </b>Growing up in New Hampshire, I've been skiing for as long as I can remember. It's a great way to get outside during the winter, and nothing beats speeding downhill through the glades or skating down fresh corduroy at a nordic area.  </li>
+              </ul>
             </section>
         </section>
         <br id="now"/><br/><br/>
+        <Image src={cs50_photo} className="im-right"  thumbnail />
         <section>
             <h2>What I'm Doing Now</h2>
-            <p>…</p>
+            
+            This summer, I'm working with the CS50 team where I'll be teaching a few summer school classes and helping with curriculum development for future versions of the course. I'm working remotely this summer, so I'll also be running, biking, hiking, and spending time with my family, dog, and two cats!
+
+            
         </section>
         <br id="download"/><br/><br/>
         <section>

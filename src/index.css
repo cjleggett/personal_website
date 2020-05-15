@@ -110,7 +110,7 @@ footer {
 }
 
 #edu{
-  background-image: url("./images/harvard.jpg");
+  background-image: url("./images/sc_roof.JPG");
   background-size: cover;
 }
 
@@ -222,17 +222,14 @@ iframe{
   overflow: auto;
 }
 
-.im_contain{
-  text-align: center;
-  padding-bottom: 20px;
-}
-
 .im-right{
   float: right;
   margin-left: 30px;
+  max-width: 50%;
 }
 
 .im-left{
   float: left;
   margin-right: 30px;
+  max-width: 50%;
 }
