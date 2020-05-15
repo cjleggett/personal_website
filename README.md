@@ -9,4 +9,4 @@ This website is intended to give people just a little bit of information about m
 * I've hosted the site using Netlify with a domain name bought on NameCheap
 
 ### Access:
-Check out the site at [www.connorleggett.net](www.connorleggett.net)
+Check out the site at [www.connorleggett.net](http://www.connorleggett.net/)
