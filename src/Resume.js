@@ -1,4 +1,5 @@
 import React from 'react';
+import VizSensor from 'react-visibility-sensor'
 import './App.css';
 import roof_photo from "./images/sc_roof.JPG";
 import coding_photo from "./images/code.jpeg";
@@ -12,6 +13,22 @@ import {Image} from 'react-bootstrap';
 
 
 class Resume extends React.Component {
+  constructor(props){
+    super();
+    this.state = {
+      "education": false, 
+      "skills": false, 
+      "work": false, 
+      "software": false, 
+      "teach": false, 
+      "other": false, 
+      "acts": false, 
+      "vol": false, 
+      "hobbies": false, 
+      "now": false, 
+      "download": false
+    }
+  }
 
   render (){
     const resume_link = <a onClick={e => this.props.externalLink(e, require("./images/Resume.pdf"))} href={require("./images/Resume.pdf")}>here</a>
@@ -27,7 +44,7 @@ class Resume extends React.Component {
             <li><a href="#skills">Technical Skills</a></li>
             <li><a href="#work">Work Experience</a>
                 <ul>
-                    <li><a href="#lz">Software Engineering</a></li>
+                    <li><a href="#software">Software Engineering</a></li>
                     <li ><a  href="#teach">Teaching/Education</a></li>
                     <li><a href="#other">Other Work</a></li>
                 </ul>
@@ -85,7 +102,7 @@ class Resume extends React.Component {
         <br id="work"/><br/><br/>
         <section>
             <h2>Work Experience</h2>
-            <br id="lz"/><br/><br/>
+            <br id="software"/><br/><br/>
             <section>
             <h3>Software Engineering</h3>
             <Image src={lz_photo} className="im-right"  thumbnail />
@@ -132,7 +149,7 @@ class Resume extends React.Component {
               <Image src={pbha_photo} className="im-left"  thumbnail />
               <h3>Volunteer Work</h3>
               <ul>
-                <li><b>Recent Immigrant Term-Time Enrichment (RITE):</b>Since coming to college, I have volunteered as a tutor at RITE, an organization within the {pbha_link} (PBHA), a large student-run service organization on campus. During my time with RITE, I have assisted students learning English as a second language with homework, test preparation, and conversational English. I was a co-director of the group from 2019 to 2020, so I assisted in recruiting, training, and coordinating other tutors and attended PBHA cabinet meetings.</li>
+                <li><b>Recent Immigrant Term-Time Enrichment (RITE): </b>Since coming to college, I have volunteered as a tutor at RITE, an organization within the {pbha_link} (PBHA), a large student-run service organization on campus. During my time with RITE, I have assisted students learning English as a second language with homework, test preparation, and conversational English. I was a co-director of the group from 2019 to 2020, so I assisted in recruiting, training, and coordinating other tutors and attended PBHA cabinet meetings.</li>
                 </ul>
               <br/><br/><br/>
             </section>
@@ -150,11 +167,11 @@ class Resume extends React.Component {
         <br id="now"/><br/><br/>
         <Image src={cs50_photo} className="im-right"  thumbnail />
         <section>
+          <VizSensor onChange={(isVisible) => this.inView(isVisible, "now")}>
             <h2>What I'm Doing Now</h2>
+          </VizSensor>
             
             This summer, I'm working with the CS50 team where I'll be teaching a few summer school classes and helping with curriculum development for future versions of the course. I'm working remotely this summer, so I'll also be running, biking, hiking, and spending time with my family, dog, and two cats!
-
-            
         </section>
         <br id="download"/><br/><br/>
         <section>
@@ -167,7 +184,26 @@ class Resume extends React.Component {
     </div>
   )
 
+  
+
   }
+
+    
+  inView = (isVisible, id) => {
+    console.log(isVisible);
+
+    var current = this.state;
+    current[id] = isVisible;
+
+    this.setState({
+      current
+    })
+
+    console.log(this.state)
+
+  }
+
+  
     
 }
 
