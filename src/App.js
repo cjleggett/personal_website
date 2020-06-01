@@ -53,7 +53,7 @@ class App extends React.Component {
             <Nav className="mr-auto">
               <Nav.Link onClick={e => this.switchPage(e, "contact")}>Contact</Nav.Link>
               <Nav.Link onClick={e => this.externalLink(e, "https://github.com/cjleggett")}href="#">GitHub</Nav.Link>
-              <Nav.Link onClick={e => this.externalLink(e, "https://www.linkedin.com/in/connor-leggett")}href="#">Linkden</Nav.Link>
+              <Nav.Link onClick={e => this.externalLink(e, "https://www.linkedin.com/in/connor-leggett")}href="#">LinkedIn</Nav.Link>
               <Nav.Link onClick={e => this.externalLink(e, require("./images/Resume.pdf"))}href="#">Resume</Nav.Link>
             </Nav>
             <Nav>
