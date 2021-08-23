@@ -9,6 +9,7 @@ import lawn_photo from "./images/lawn.JPG";
 import snow_sit from "./images/snow_sit.JPG";
 import cs50_photo from "./images/cs50.jpg";
 import pbha_photo from "./images/pbha.jpg";
+import esp_photo from "./images/running.jpeg"
 import {Image} from 'react-bootstrap';
 
 
@@ -33,7 +34,6 @@ class Resume extends React.Component {
   render (){
     const resume_link = <a onClick={e => this.props.externalLink(e, require("./images/Resume.pdf"))} href={require("./images/Resume.pdf")}>here</a>
     const lz_link = <a href="https://www.lazarusai.com/" onClick={e => this.props.externalLink(e, "https://www.lazarusai.com/")} >Lazarus Enterprises</a>
-    const juni_link = <a href="https://junilearning.com/" onClick={e => this.props.externalLink(e, "https://junilearning.com/")} ><b>Juni Learning</b></a>
     const pbha_link = <a href="http://pbha.org/" onClick={e => this.props.externalLink(e, "http://pbha.org/")} >Phillips Brooks House Association</a>
   return(
     <div>
@@ -63,7 +63,8 @@ class Resume extends React.Component {
         <br id="education"/><br/><br/>
         <section>
             <h2>Education</h2>
-            <Image src={roof_photo} className="im-left" fluid thumbnail />
+            <Image src={roof_photo} className="im-right" fluid thumbnail />
+            I am currently studying statistics and computer science at Harvard College where I am scheduled to graduate in May of 2023. Below are some of the courses I have taken during my time here:
             <ul>
               <li><b>Computer Science:</b>
                 <ul>
@@ -96,14 +97,14 @@ class Resume extends React.Component {
         <br id="skills"/><br/><br/>
         <section>
             <h2>Technical Skills</h2>
-            <Image src={coding_photo} className="im-right" fluid thumbnail />
+            <Image src={coding_photo} className="im-left" fluid thumbnail />
             <ul>
               <li><b>Programming Languages: </b> Python (Expert), JavaScript (Proficient), Java (Proficient), R (Proficient), OCaml (Prior Experience), C/C++ (Prior Experience)</li>
               <li><b>Web Development: </b> ExpressJS, Django, React, Flask, HTML/CSS</li>
               <li><b>Development Technologies: </b> Git/GitHub, AWS EC2 Instances, Google Firebase</li>
             </ul>
         </section>
-        <br id="work"/><br/><br/>
+        <br id="work"/><br/><br/><br/><br/><br/>
         <section>
             <h2>Work Experience</h2>
             <br id="software"/><br/><br/>
@@ -136,7 +137,7 @@ class Resume extends React.Component {
             <br/><br/><br/>
             <br id="teach"/><br/><br/>
             <section>
-              <Image src={teaching_photo} className="im-left"  thumbnail />
+              <Image src={teaching_photo} className="im-right"  thumbnail />
               <h3>Teaching</h3>
               <ul>
                 <li><b>Computer Science 50 at Harvard - Head Course Assistant </b>
@@ -147,7 +148,7 @@ class Resume extends React.Component {
                     <li>Compiled 9 extensive written supplements for lectures on web design</li>
                   </ul>
                 </li>
-                <li><b>{juni_link} - Instructor</b>
+                <li><b>Juni Learning - Instructor</b>
                   <ul>
                     <li>Instructed students in grades 6-10 on programming in Python</li>
                     <li>Conducted introductory classes for students and gave recommendations for class placement</li>
@@ -156,7 +157,7 @@ class Resume extends React.Component {
               </ul>
             </section>
             <br id="other"/><br/><br/>
-            <Image src={lawn_photo} id="lawn" className="im-right"  thumbnail />
+            <Image src={lawn_photo} id="lawn" className="im-left"  thumbnail />
             <section>
               <h3>Other Work</h3>
               <ul>
@@ -173,13 +174,13 @@ class Resume extends React.Component {
               <br/>
               <br id="vol"/><br/><br/>
               
-              <Image src={pbha_photo} className="im-left"  thumbnail />
+              <Image src={esp_photo} className="im-right"  thumbnail />
               <h3>Volunteer Work</h3>
               <ul>
-                <li><b>Recent Immigrant Term-Time Enrichment (RITE) - Director </b>
+                <li><b>Esperanza Project - Teacher </b>
                   <ul>
-                    <li>Assisted students in middle and high school who are first or second generation immigrants with test preparation, math and physics homework, and English.</li>
-                    <li>Organized volunteer hours and recruited new volunteers</li>
+                    <li>Taught science, math, and geography classes to students aged 5-16 with varying levels of English</li>
+                    <li>Assisted in construction and maintenance projects on school grounds</li>
                   </ul>
                 </li>
                 <li><b>Recent Immigrant Term-Time Enrichment (RITE) - Director </b>
@@ -194,7 +195,7 @@ class Resume extends React.Component {
             <br id="hobbies"/><br/><br/>
             <section>
               <h3>Hobbies</h3>
-              <Image src={snow_sit} className="im-right"  thumbnail />
+              <Image src={snow_sit} className="im-left"  thumbnail />
               <ul>
                 <li><b>Running: </b>I've run with the Harvard College Running Club throughout my time on campus, and it's helped me to meet some incredible people and find a community on campus. I'm currently serving as the Club's treasurer, where I am responsible for applying for grants, collecting meet fees from other clubs, and creating a budget for the year.</li>
                 <li><b>Soccer: </b>I love both playing and watching soccer, especially when Liverpool's winning! </li>
@@ -205,7 +206,7 @@ class Resume extends React.Component {
         <br id="download"/><br/><br/>
         <section>
             <h2>Resume Download</h2>
-  <p>If you would like to keep a copy of my resume for your files, you can download a single-page verison {resume_link}. </p>
+  <p>If you would like to keep a copy of my resume, you can download a single-page verison {resume_link}. </p>
         </section>
     </div>
     
