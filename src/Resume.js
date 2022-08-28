@@ -71,13 +71,13 @@ class Resume extends React.Component {
                   <li>CS 124: Data Structures and Algorithms</li>
                   <li>CS 109: Data Science</li>
                   <li>CS 51: Abstraction and Design in Computer Science</li>
+                  <li>CS 136: Economics and Computation</li>
                 </ul>
               </li>
               <li><b>Statistics:</b>
                 <ul>
                   <li>STAT 110: Probability</li>
                   <li>STAT 111: Statistical Inference</li>
-                  <li>STAT 139: Linear Modeling</li>
                 </ul>
               </li>
               <li><b>Mathematics:</b>
@@ -89,7 +89,8 @@ class Resume extends React.Component {
               <li><b>Economics:</b>
                 <ul>
                   <li>ECON 50: Big Data in Economics</li>
-                  <li>ECON 10: Microeconomics</li>
+                  <li>ECON 1123: Econometrics</li>
+                  <li>ECON 1011a: Intermediate Microeconomics</li>
                 </ul>
               </li>
             </ul>
@@ -99,7 +100,7 @@ class Resume extends React.Component {
             <h2>Technical Skills</h2>
             <Image src={coding_photo} className="im-left" fluid thumbnail />
             <ul>
-              <li><b>Programming Languages: </b> Python (Expert), JavaScript (Proficient), Java (Proficient), R (Proficient), OCaml (Prior Experience), C/C++ (Prior Experience)</li>
+              <li><b>Programming Languages: </b> Python (Expert), JavaScript (Proficient), Java (Proficient), R (Proficient), SQL (Proficient), OCaml (Prior Experience), C/C++ (Prior Experience)</li>
               <li><b>Web Development: </b> ExpressJS, Django, React, Flask, HTML/CSS</li>
               <li><b>Development Technologies: </b> Git/GitHub, AWS EC2 Instances, Google Firebase</li>
             </ul>
@@ -112,6 +113,13 @@ class Resume extends React.Component {
             <h3>Software Engineering and Data Science</h3>
             <Image src={lz_photo} className="im-right"  thumbnail />
               <ul>
+                <li><b>QuantCo - Data Science and Software Engineering Intern</b>
+                  <ul>
+                    <li>Developed internal conda package to aid in the comparison between two tables housed in SQL databases</li>
+                    <li>Automated monitoring of client-owned control table to check data load status and notify relevant parties in case of an error.</li>
+                    <li>Led development of a ranking system for single- or multi-player games including automated game entry and score reporting with a SlackBot.</li>
+                  </ul>
+                </li>
                 <li><b>Federal Emergency Management Agency - Data Science Intern </b>
                   <ul>
                     <li>Combined FEMA household grant data and Census community survey data using R to compare application rates between different age groups.</li>
@@ -144,8 +152,7 @@ class Resume extends React.Component {
                   <ul>
                     <li>Created content and exercises for web design and artificial intelligence used by other teaching fellows</li>
                     <li>Assisted in course logistics including hiring 10+ new course assistants</li>
-                    <li>Held weekly sections for 10-20 students, and office hours with 5-10 students</li>
-                    <li>Compiled 9 extensive written supplements for lectures on web design</li>
+                    <li>Held weekly sections for 80-100 students, and office hours with 5-10 students</li>
                   </ul>
                 </li>
                 <li><b>Juni Learning - Instructor</b>
