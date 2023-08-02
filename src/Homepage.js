@@ -10,7 +10,7 @@ class Homepage extends React.Component {
       <Jumbotron>
         <h1>Hi, I'm Connor.</h1>
         <p className="centered">
-          I'm currently a senior at Harvard College studying Computer Science and Economics hoping to use data to make the world a better place.
+          I'm a data scientist and software engineer interested in finding new ways to use data to make the world a better place.
         </p>
         <p className="centered">
           <Button  variant="secondary" onClick={e => this.props.switchPage(e, "resume")}>Learn More</Button>
@@ -18,19 +18,20 @@ class Homepage extends React.Component {
       </Jumbotron>
 
 
+      <Card onClick={e => this.props.switchPage(e, "resume", "work")}bg="dark" style={{ width: '18rem' }}>
+        <Card.Header>Work</Card.Header>
+        <Card.Body id="exp" className="card-body">
+        </Card.Body>
+      </Card>
+
       <Card onClick={e => this.props.switchPage(e, "resume", "education")} bg="dark" style={{ width: '18rem' }}>
         <Card.Header>Education</Card.Header>
         <Card.Body id="edu" className="card-body">
         </Card.Body>
       </Card>
-      <Card onClick={e => this.props.switchPage(e, "resume", "work")}bg="dark" style={{ width: '18rem' }}>
-        <Card.Header>Experience</Card.Header>
-        <Card.Body id="exp" className="card-body">
-        </Card.Body>
-      </Card>
 
       <Card onClick={e => this.props.switchPage(e, "resume", "acts")}bg="dark" style={{ width: '18rem' }}>
-        <Card.Header>Activities</Card.Header>
+        <Card.Header>Fun</Card.Header>
         <Card.Body id="acts-card" className="card-body">
         </Card.Body>
       </Card>
