@@ -1,23 +1,27 @@
-html, body {
+html,
+body {
   background-color: #fffffc;
   color: #30343f;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin: 0px;
- }
+}
 
 nav {
-  background-color: #086788; 
+  background-color: #086788;
   color: #fffffc;
 }
 
 #after-nav {
-  padding: 20px; }
+  padding: 20px;
+}
 
 h1 {
-  text-align: center; }
+  text-align: center;
+}
 
-
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -25,10 +29,11 @@ input[type=text], select, textarea {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical; }
+  resize: vertical;
+}
 
 footer > a {
-  color: #fffffc; 
+  color: #fffffc;
 }
 
 .content {
@@ -41,12 +46,14 @@ footer > a {
 }
 
 footer > a:hover {
-  color: #d7dae0; }
+  color: #d7dae0;
+}
 
 #page-content {
   flex: 1 0 auto;
 
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
 footer {
   background-color: #086788;
@@ -54,19 +61,23 @@ footer {
 
 #sticky-footer {
   flex-shrink: none;
-  bottom: 0px; }
+  bottom: 0px;
+}
 
 #toplink {
-  float: right; }
+  float: right;
+}
 
 @media only screen and (max-width: 500px) {
   #toplink {
     color: red;
-    float: center; } }
+    float: center;
+  }
+}
 
 .link {
-    color: #fffffc
-  }
+  color: #fffffc;
+}
 
 /*# sourceMappingURL=style.css.map */
 
@@ -74,15 +85,12 @@ footer {
   text-align: center;
 }
 
-
-#form-contain{
+#form-contain {
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
-  padding-bottom: 50px
+  padding-bottom: 50px;
 }
-
-
 
 .card {
   display: inline-block;
@@ -91,50 +99,47 @@ footer {
   margin-right: 10px;
   filter: blur(px);
   color: white;
-  transition: transform .5s;
+  transition: transform 0.5s;
   cursor: pointer;
 }
 
-
-.card:hover{
-  transform: scale(1.05)
+.card:hover {
+  transform: scale(1.05);
 }
 
 .jumbotron {
   padding-top: 25px;
-  padding-bottom: 25px
+  padding-bottom: 25px;
 }
 
-.card-body{
-  height: 250px
+.card-body {
+  height: 250px;
 }
 
-#edu{
+#edu {
   background-image: url("./images/sc_roof.JPG");
   background-size: cover;
 }
 
-#exp{
+#exp {
   background-image: url("./images/code.jpeg");
   background-size: cover;
 }
 
-#acts-card{
+#acts-card {
   background-image: url("./images/me_in_mountains.JPG");
   background-size: cover;
 }
 
-#content{
+#content {
   margin-top: 70px;
 }
 
-
-@media only screen and (max-width: 835px){
+@media only screen and (max-width: 835px) {
   .mobileShow {
-    display: inline
+    display: inline;
   }
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -167,7 +172,7 @@ main > nav {
 .nav-item-visible {
   color: black;
   font-weight: bold;
-  font-size: x-large
+  font-size: x-large;
 }
 
 .nav-item-hidden {
@@ -177,7 +182,7 @@ main > nav {
 .section-nav a {
   text-decoration: none;
   display: block;
-  padding: .125rem 0;
+  padding: 0.125rem 0;
   transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 }
 
@@ -191,12 +196,13 @@ main > nav {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background: #fff;
 }
 
-
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -211,11 +217,11 @@ h1 {
 /** page layout **/
 main {
   display: grid;
-  grid-template-columns: .15fr .85fr;
+  grid-template-columns: 0.15fr 0.85fr;
   max-width: 100em;
   width: 90%;
   margin: 0 auto;
-  padding-top: 30px
+  padding-top: 30px;
 }
 
 /** enlarge the sections for this demo, so that we have a long scrollable page **/
@@ -223,32 +229,31 @@ section {
   padding-bottom: 1rem;
 }
 
-#resume_content{
+#resume_content {
   border-top: 1px solid white;
   padding-left: 20px;
 }
 
-
-iframe{
+iframe {
   overflow: auto;
 }
 
-img{
+img {
   display: block;
 }
 
-.content{
+.content {
   padding-left: 20px;
   margin-bottom: 0px;
 }
 
-.im-right{
+.im-right {
   float: right;
   margin-left: 30px;
   max-width: 50%;
 }
 
-.im-left{
+.im-left {
   float: left;
   margin-right: 30px;
   max-width: 50%;
