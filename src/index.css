@@ -149,23 +149,35 @@ main > nav {
 
 /* 3. ScrollSpy active styles (see JS tab for activation) */
 .section-nav li.active > a {
-  color: #333;
+  color: red;
   font-weight: 500;
 }
 
 /* Sidebar Navigation */
 .section-nav {
   padding-left: 0px;
+  padding-right: 15px;
   border-right: 1px solid #efefef;
   background-color: white;
   border-top: 25px solid;
+  font-size: larger;
+  width: fit-content;
+}
+
+.nav-item-visible {
+  color: black;
+  font-weight: bold;
+  font-size: x-large
+}
+
+.nav-item-hidden {
+  color: rgb(66, 62, 62);
 }
 
 .section-nav a {
   text-decoration: none;
   display: block;
   padding: .125rem 0;
-  color: rgb(66, 62, 62);
   transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 }
 
@@ -199,7 +211,7 @@ h1 {
 /** page layout **/
 main {
   display: grid;
-  grid-template-columns: .25fr .75fr;
+  grid-template-columns: .15fr .85fr;
   max-width: 100em;
   width: 90%;
   margin: 0 auto;
@@ -212,13 +224,22 @@ section {
 }
 
 #resume_content{
-  border-top: 60px solid white;
+  border-top: 1px solid white;
   padding-left: 20px;
 }
 
 
 iframe{
   overflow: auto;
+}
+
+img{
+  display: block;
+}
+
+.content{
+  padding-left: 20px;
+  margin-bottom: 0px;
 }
 
 .im-right{
