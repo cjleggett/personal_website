@@ -95,14 +95,6 @@ class App extends React.Component {
             >
               LinkedIn
             </Nav.Link>
-            <Nav.Link
-              onClick={(e) =>
-                this.externalLink(e, require("./images/Resume.pdf"))
-              }
-              href="#"
-            >
-              Resume
-            </Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="#top">Back To Top</Nav.Link>
